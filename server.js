@@ -13,6 +13,7 @@ app.get('/', (req, res) => {
     res.send("API de Usuários está funcionando")
 })
 
+//Inicia o servidor
 app.listen(porta, () => {
     console.log(`Servidor rodando em http://localhost:${porta}`)
 })
