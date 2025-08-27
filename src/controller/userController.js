@@ -6,8 +6,12 @@ const getAllUsers = (req, res) => {
     res.status(200).json(users)
 }
 
+// Pesquisa de usuário pelo id
 const getUserById = (req, res) => {
-    const user = userModel.findById()
+
+    const {id} = req.params
+
+    const user = userModel.findById(Number(id))
     res.status(200).json(user)
 }
 
@@ -17,7 +21,7 @@ const createUser = (req, res) => {
 
     if (!name || !email) {
         return res.status(400).json({
-            massage: "Nome e email são obrigatórios"
+            message: "Nome e email são obrigatórios"
         })
     }
 

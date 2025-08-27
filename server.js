@@ -2,6 +2,9 @@
 //Importar módulo do express
 const express = require('express')
 
+//Importa as rotas de usuário
+const userRoutes = require('./src/routes/userRoutes')
+
 //Criar uma aplicação express
 const app = express()
 
@@ -12,6 +15,9 @@ const porta = 8000
 app.get('/', (req, res) => {
     res.send("API de Usuários está funcionando")
 })
+
+//Usando as rotas de usuário
+app.use('/api/users', userRoutes)
 
 //Inicia o servidor
 app.listen(porta, () => {
