@@ -1,0 +1,14 @@
+{
+  "name": "desenvolvendo_api",
+  "version": "1.0.0",
+  "description": "Desenvolvendo API de usuários.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel Lacerda",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
